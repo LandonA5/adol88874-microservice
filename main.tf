@@ -20,7 +20,7 @@ resource "google_compute_instance" "microservice-1" {
   }
 }
 resource "google_compute_firewall" "default" {
- name    = "dock-net"
+ name    = "micro-net"
  network = "default"
 
  allow {
