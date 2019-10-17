@@ -7,9 +7,10 @@ def index():
    return 'Service is alive'
 
 @app.route('/1', methods=['GET', 'POST'])
-def post1(userNum):
+def post1():
    if request.method == 'POST':
-       return userNum
+       userNum = request.form['userNum']
+       return jsonify(userNum)
    else:
        return 'You should POST to this URL'
 
